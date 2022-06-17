@@ -27,7 +27,7 @@ function sendSequest() {
         act.textContent = "Type of activity: " + data['type'];
     })
 }
-const formm = document.getElementById('form')
+const formm = document.getElementById('form') as HTMLFormElement
 const nameEl = document.getElementById('name') as HTMLInputElement
 const bla = document.getElementById('bla')
 const act = document.getElementById('activity')
