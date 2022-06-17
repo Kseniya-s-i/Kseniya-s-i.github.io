@@ -1,5 +1,5 @@
 function sendSequest() {
-    return fetch("http://www.boredapi.com/api/activity").then(response => {
+    return fetch("http://www.boredapi.com/api/activity", mode="no-cors").then(response => {
         return response.json()
     }).then(data => {
         console.log(data);
