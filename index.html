@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="device-width">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="bundle.js" defer></script>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <img src="img/logo2.png" style="max-height: 50px;" />
+            <a href="#about">About</a>
+            <a href="#act">Job</a>
+            <a href="#cont">Contacts</a>
+            <a href="#actor">Activity</a>
+        </div>
+        <p class="introparagraph">Intro</p>
+
+        <div class="introtext">
+            <p>Hi! My name is Ksenia,
+                on this site you can learn a little more about me.</p>
+        </div>
+
+        <div class="introimg">
+            <img src="img/kseniya1.png" />
+        </div>
+
+        <p class="introparagraph" id="about">About</p>
+        <hr class="line">
+
+        <div class="item">
+            <div class="li1">
+                <p class="greypara">A little about myself</p>
+                <h3>About</h3>
+                <p class="para">My name is Ksenia, I am 19 years old, was born in Kazan. I love to play sports and I
+                    adore stretching. I also like to spend time reading and drawing on a tablet, because it is a best
+                    way to relax for me.</p>
+                <a class="linkforbehance" target="_blank" href="https://assist-likvid.ru/kseniya-site">View my site</a>
+            </div>
+            <div class="li2">
+                <img src="img/reading1.jpg">
+            </div>
+        </div>
+
+        <p class="introparagraph" id="act">Job</p>
+        <hr class="line">
+
+        <div class="item">
+            <div class="li1">
+                <img src="img/design.png">
+            </div>
+            <div class="li22">
+                <p class="greypara">Website design</p>
+                <h3>Figma > Tilda > Behance</h3>
+                <p class="para">In my free time, I like to create website designs,
+                    and then transfer them to Tilda and make various animations there.
+                    I have published several of my works on Behance.</p>
+                <a class="linkforbehance" target="_blank" href="https://www.behance.net/devksuksue196">View works</a>
+            </div>
+        </div>
+
+        <p class="introparagraph" id="cont">Contacts</p>
+        <hr class="line">
+
+        <div class="item" style="height: 400px;">
+            <div class="li1">
+                <h3 style="color: #F6EEEE;font-weight:400;">Always in touch</h3>
+
+            </div>
+            <div class="li2">
+                <p style="color: #F6EEEE;">You can always write to me by email,
+                    find me in messenger or write to direct.</p>
+
+                <a class="contlink" style="margin-top: 30px;" href="https://mail.ru/">Mail</a>
+                <a class="contlink" href="https://www.instagram.com/">Instagram</a>
+                <a class="contlink" href="https://www.vk.com/">Vk.com</a>
+                <a class="contlink" href="https://web.telegram.org/k/">Telegram</a>
+                <a class="contlink" href="https://web.telegram.org/k/">What's app</a>
+            </div>
+        </div>
+
+        <p class="introparagraph" id="actor">Activity</p>
+        <hr class="line">
+
+        <div class="item last">
+            <div class="li1 last">
+                <h3 style="color: #F6EEEE;font-weight:400;">Do not know what to do?</h3>
+                <div>
+                    <input type="text" id="name" style="display: none;">
+                    <form id="form">
+                        <input id="submit" type="submit" class="forminpt" value="Generate!">
+                    </form>
+                    <a id="linked" class="forminpt sec">No link available</a>
+                </div>
+            </div>
+            <div class="li2 last" style="width: 40%;">
+                <p style="color: #F6EEEE;font-size: 12px;">Below you can see the service that generates
+                    interesting and useful activities for you! You can also view the activity
+                    topic and a link to information that will surprise you. Also sometimes you can find a link to a
+                    useful information about the activity. Try to generate!</p>
+                <div id="answers">
+                    <p id="bla" class="paraact f" style="margin-top: 21px;"></p>
+                    <p id="activity" class="paraact s"></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="foot">
+            <div class="nav">
+                <p style="float: left;display: block;margin-top: 29px;font-size: 12px;">Kazan</p>
+                <p style="margin: auto;;display: block;margin-top: 29px;font-size: 12px;">2022</p>
+                <img src="img/logo2.png"
+                    style="max-height: 30px;display:block;float: right;margin-top: 23px;margin-right: -20px;">
+            </div>
+        </div>
+    </footer>
+    <script>
+        function sendSequest() {
+            return fetch("http://www.boredapi.com/api/activity").then(response => {
+                return response.json()
+            }).then(data => {
+                console.log(data);
+                answ.style.display = 'block';
+                if (data["link"] != "") {
+                    linked.textContent = "Link";
+                    linked.href = data["link"];
+                    linked.style.cursor = "pointer";
+                    linked.style.textDecoration = "none";
+                    linked.style.color = "#2D2D2D";
+                    linked.style.background = "#63E2B5";
+                    linked.style.boxShadow = "0px 0px 15px #4A4A4A";
+                    linked.target = "blank";
+                }
+                if (data["link"] === "") {
+                    linked.textContent = "No link available";
+                    linked.href = "";
+                    linked.style.cursor = "auto";
+                    linked.style.textDecoration = "none";
+                    linked.style.color = "#C9C9C9";
+                    linked.style.background = "transparent";
+                    linked.style.boxShadow = "none";
+                }
+                bla.textContent = data['activity'];
+                act.textContent = "Type of activity: " + data['type'];
+            })
+        }
+        const form = document.getElementById('form')
+        const name = document.getElementById('name')
+        const bla = document.getElementById('bla')
+        const act = document.getElementById('activity')
+        const answ = document.getElementById('answers')
+        const linked = document.getElementById('linked')
+        form.addEventListener('submit', function (e) {
+            if (name.value === '') {
+                e.preventDefault()
+
+            }
+            if (name.value != '') {
+                e.preventDefault()
+
+            }
+            sendSequest()
+        })
+    </script>
+</body>
+
+</html>
