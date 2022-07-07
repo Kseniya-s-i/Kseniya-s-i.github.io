@@ -1,0 +1,90 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-4e6bc976.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-8bb6f256.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/about.svelte",
+      "src/routes/contacts.svelte",
+      "src/routes/index.svelte",
+      "src/routes/job.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-697331e3.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8bb6f256.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-c659c5cf.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-46c1f417.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8bb6f256.js"
+    ]
+  },
+  "src/routes/about.svelte": {
+    "file": "pages/about.svelte-d22d6792.js",
+    "src": "src/routes/about.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8bb6f256.js"
+    ],
+    "css": [
+      "assets/pages/about.svelte-ab00860e.css"
+    ]
+  },
+  "src/routes/contacts.svelte": {
+    "file": "pages/contacts.svelte-fca01555.js",
+    "src": "src/routes/contacts.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8bb6f256.js"
+    ],
+    "css": [
+      "assets/pages/contacts.svelte-ca1d6e58.css"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-cf52c3a7.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8bb6f256.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-78cdc12b.css"
+    ]
+  },
+  "src/routes/job.svelte": {
+    "file": "pages/job.svelte-075ee368.js",
+    "src": "src/routes/job.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-8bb6f256.js"
+    ],
+    "css": [
+      "assets/pages/job.svelte-07496302.css"
+    ]
+  },
+  "_index-8bb6f256.js": {
+    "file": "chunks/index-8bb6f256.js"
+  }
+}
