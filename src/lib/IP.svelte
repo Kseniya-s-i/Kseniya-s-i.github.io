@@ -12,5 +12,3 @@
 </script>
 
 <p style="margin-top: 24px;">{ipString}</p>
-
-
