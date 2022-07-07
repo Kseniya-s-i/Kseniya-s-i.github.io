@@ -1,55 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400;1,700&display=swap');
-body{
-    margin: 0 auto 0 auto;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    height: 100%;
-    color: white;
-    background-color: #2D2D2D;
+<p class="introparagraph">Intro</p>
 
+    <div class="introtext">
+        <p>Hi! My name is Ksenia,
+    on this site you can learn a little more about me.</p>
+    </div>
 
-    -ms-user-select: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		user-select: none;
+    <div class="introimg">
+        <img src="/assets/logos/kseniya1.png"/>
+    </div>
 
-}
-html{
-    scroll-behavior: smooth;
-}
-
-.navbar {
-    overflow: hidden;
-    background-color: #2D2D2D;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    padding-top: 15px;
-    max-width: 900px;
-    margin: auto;
-
-  }
-
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 15px 30px 5px 30px;
-    text-decoration: none;
-    width: 70px;
-    transition-duration: .2s;
-    border-radius: 10px;
-  }
-
-  .navbar a:hover {
-    background: transparent;
-    color: #63E2B5;
-    transition-duration: .8s;
-
+    
+<style>
+	:root{
+		background-color: #2D2D2D;
+		color: #C9C9C9;
+	}
+	.introtext{
+      margin-top: -30px;
+      font-size:75px;
+	  max-width: 1000px;
   }
   .introparagraph{
       display: block;
@@ -58,21 +27,9 @@ html{
       color: #63E2B5;
       text-transform: uppercase;
   }
-  .main {
-    margin: auto;
-    margin-top: 80px;
-    height: 100%;
-    background-color: #2D2D2D;
-    max-width: 900px;
-  }
-
-  .introtext{
-      margin-top: -30px;
-      font-size:65px;
-  }
 
 .introimg img{
-    max-width: 900px;
+    max-width: 1000px;
     border-radius: 5px;
 }
 
@@ -203,3 +160,6 @@ html{
 #answers{
     display: none;
 }
+
+	
+</style>
